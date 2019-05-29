@@ -1,0 +1,11 @@
+#!/usr/bin/env stap
+
+global count_call
+
+probe kernel.function(@1).call {
+	count_call <<< 1
+}
+
+probe timer.s($2) {
+	printf("%s: %d\n", @1, @count(count_call))
+}
