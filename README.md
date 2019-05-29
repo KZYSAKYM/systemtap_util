@@ -6,6 +6,20 @@ The purpose of this repository is to create/store systemtap scripts for kernel d
 
 T.B.D
 
+## Build kernel module
+
+You can prebuild systemtap script with below cmd.
+
+```
+$ stap -v -p4 -m <mod name> <stp> [arg]
+```
+
+You can run prebuilt kernel module.
+
+```
+$ staprun -v <mod name>.ko
+```
+
 ## STP scripts
 
 ### `argv_reg_write.stp`
