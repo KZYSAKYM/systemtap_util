@@ -5,7 +5,7 @@ The purpose of this repository is to create/store systemtap scripts for kernel d
 ## Cheat Sheet
 ### Basic syntax
 
-```sh
+```awk
 /* user defined stp function */
 function <func name>(<argv>) {
 	/* procedure */
