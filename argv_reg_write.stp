@@ -1,0 +1,7 @@
+#!/usr/bin/stap -v
+
+/* usage: stap <this stap> [target function name] */
+
+probe kernel.function(@1).call {
+	printf("[%s] %s\n", @1, $$parms);
+}
